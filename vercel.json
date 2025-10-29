@@ -1,5 +1,6 @@
 {
+  "root": "portifolio",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "portifolio/dist",
   "installCommand": "npm ci"
 }
