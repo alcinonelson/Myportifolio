@@ -1,13 +1,15 @@
-import react from "react";
+import { useTranslation } from "../../hooks/useTranslation";
 
-const ScrollDown = () =>{
+const ScrollDown = () => {
+    const { t } = useTranslation();
+
     return (
-        <div className="scroll-down">
+        <div className="home__scroll">
             <a href="#about" className="home__scroll-button button--flex">
                 <svg
                 width="32px"
                 height="32px"
-                class="home__scroll-mouse"
+                className="home__scroll-mouse"
                 viewBox="0 0 247 390"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +23,7 @@ const ScrollDown = () =>{
                 }}
               >
                 <path
-                  class="wheel"
+                  className="wheel"
                   d="M123.359,79.775l0,72.843"
                   style={{
                     fill: "none",
@@ -39,7 +41,7 @@ const ScrollDown = () =>{
                   }}
                 ></path>
               </svg>
-              <span className="home__scroll-name">Scroll Down</span>
+              <span className="home__scroll-name">{t('home.scrollDown')}</span>
               <i className="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
         </div>

@@ -1,0 +1,327 @@
+/* ==================== CSS VARIABLES & UTILITIES ==================== */
+/* This file serves as the design system foundation for the portfolio */
+
+:root {
+  /* ==================== COLORS ==================== */
+  /* Primary Palette */
+  --color-primary: #0e2f5e;
+  --color-primary-light: #1a4d8c;
+  --color-primary-lighter: #2d6fb8;
+
+  /* Accent Colors */
+  --color-accent: #ff6b35;
+  --color-accent-light: #ff8c5a;
+  --color-accent-lighter: #ffb3a1;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-light: #f5f5f5;
+  --color-light-gray: #e8e8e8;
+  --color-gray: #999999;
+  --color-dark-gray: #666666;
+  --color-dark: #333333;
+  --color-darker: #1a1a1a;
+  --color-black: #000000;
+
+  /* Status Colors */
+  --color-success: #4caf50;
+  --color-warning: #ffc107;
+  --color-error: #f44336;
+  --color-info: #2196f3;
+
+  /* ==================== TYPOGRAPHY ==================== */
+  /* Font Families */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /* ==================== SPACING ==================== */
+  /* 8px Grid System */
+  --spacing-xs: 0.25rem;     /* 4px */
+  --spacing-sm: 0.5rem;      /* 8px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.5rem;      /* 24px */
+  --spacing-xl: 2rem;        /* 32px */
+  --spacing-2xl: 3rem;       /* 48px */
+  --spacing-3xl: 4rem;       /* 64px */
+  --spacing-4xl: 6rem;       /* 96px */
+
+  /* ==================== BORDER RADIUS ==================== */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;      /* 4px */
+  --radius-md: 0.5rem;       /* 8px */
+  --radius-lg: 1rem;         /* 16px */
+  --radius-xl: 1.5rem;       /* 24px */
+  --radius-2xl: 2rem;        /* 32px */
+  --radius-full: 9999px;     /* Fully rounded */
+
+  /* ==================== SHADOWS ==================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.2);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* ==================== TRANSITIONS & ANIMATIONS ==================== */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* ==================== Z-INDEX SCALE ==================== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* ==================== RESPONSIVE BREAKPOINTS ==================== */
+  /* These are for reference; use in media queries */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-xs { gap: var(--spacing-xs); }
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+.gap-xl { gap: var(--spacing-xl); }
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+
+/* Spacing utilities */
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+.p-2xl { padding: var(--spacing-2xl); }
+
+.px-sm { padding-left: var(--spacing-sm); padding-right: var(--spacing-sm); }
+.px-md { padding-left: var(--spacing-md); padding-right: var(--spacing-md); }
+.px-lg { padding-left: var(--spacing-lg); padding-right: var(--spacing-lg); }
+
+.py-sm { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm); }
+.py-md { padding-top: var(--spacing-md); padding-bottom: var(--spacing-md); }
+.py-lg { padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg); }
+
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Visibility utilities */
+.hidden { display: none !important; }
+.visible { display: block; }
+
+/* Border radius utilities */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadow utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Color utilities */
+.text-primary { color: var(--color-primary); }
+.text-accent { color: var(--color-accent); }
+.text-white { color: var(--color-white); }
+.text-gray { color: var(--color-dark-gray); }
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-white { background-color: var(--color-white); }
+.bg-light { background-color: var(--color-light); }
+.bg-dark { background-color: var(--color-dark); }
+
+/* ==================== RESPONSIVE UTILITIES ==================== */
+
+/* Mobile-first approach: base styles apply to mobile, then override for larger screens */
+@media (max-width: 575px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media (min-width: 576px) {
+  .hidden-tablet-up { display: none !important; }
+}
+
+@media (min-width: 768px) {
+  .hidden-desktop-up { display: none !important; }
+}
+
+/* ==================== GLOBAL DEFAULTS ==================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+/* Container base class */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+}
+
+/* Section base class */
+.section {
+  padding: var(--spacing-xl) 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* ==================== DARK MODE THEME ==================== */
+/* Custom dark palette that preserves brand identity */
+[data-theme="dark"] {
+  /* ==================== COLORS ==================== */
+  /* Inverted Background Colors */
+  --color-white: #0f0f0f;
+  --color-light: #1a1a1a;
+  --color-light-gray: #2d2d2d;
+  --color-gray: #8a8a8a;
+  --color-dark-gray: #b0b0b0;
+  --color-dark: #e0e0e0;
+  --color-darker: #f5f5f5;
+  --color-black: #ffffff;
+
+  /* Brand Colors - Adjusted for dark mode visibility */
+  --color-primary: #4a8dd4;
+  --color-primary-light: #6ba6e0;
+  --color-primary-lighter: #8dbfe8;
+
+  /* Accent Colors - Keep vibrant */
+  --color-accent: #ff8c5a;
+  --color-accent-light: #ffa47a;
+  --color-accent-lighter: #ffbd9a;
+
+  /* Status Colors - Adjusted for dark backgrounds */
+  --color-success: #66bb6a;
+  --color-warning: #ffa726;
+  --color-error: #ef5350;
+  --color-info: #42a5f5;
+
+  /* ==================== SHADOWS ==================== */
+  /* Stronger shadows for depth in dark mode */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.7);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}

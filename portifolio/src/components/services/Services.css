@@ -1,0 +1,121 @@
+/* ==================== SERVICES SECTION ==================== */
+
+.services__content {
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.service__card {
+  padding: var(--spacing-xl);
+  background-color: var(--color-light);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition-normal);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service__card:hover {
+  background-color: var(--color-white);
+  border-color: var(--title-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.service__icon-wrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  border: 2px solid var(--title-color);
+  transition: var(--transition-normal);
+}
+
+.service__card:hover .service__icon-wrapper {
+  transform: scale(1.05);
+}
+
+.service__icon {
+  font-size: 2rem;
+  color: var(--title-color);
+}
+
+.service__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.service__description {
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media screen and (max-width: 992px) {
+  .services__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .service__card {
+    padding: var(--spacing-lg);
+  }
+
+  .service__icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .service__icon {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service__card {
+    padding: var(--spacing-md);
+  }
+
+  .service__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .service__icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .service__icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .service__card {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .service__description {
+    font-size: var(--font-size-xs);
+  }
+
+  .service__icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+}

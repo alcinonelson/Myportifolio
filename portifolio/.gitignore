@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code
+.claude/
+../.claude/
+../CLAUDE.md
+../DEVELOPMENT_GUIDE.md
+../IMAGE_GUIDE.md
+../INTERNATIONALIZATION_GUIDE.md
+../REFACTORING_SUMMARY.md
