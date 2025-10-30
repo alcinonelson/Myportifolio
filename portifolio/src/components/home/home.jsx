@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css"; 
+import "./home.css";
 import Social from "./social.jsx";
 import Data from "./Data.jsx";
 import ScrollDown from "./ScrollDown.jsx";
